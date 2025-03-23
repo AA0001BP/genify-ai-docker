@@ -1,0 +1,42 @@
+# Dependency directories
+node_modules
+npm-debug.log
+
+# Build directories
+.next
+out
+
+# Version control
+.git
+.gitignore
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Docker files
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Documentation files
+*.md
+LICENSE
+
+# Development files
+.vscode
+.idea
+*.log
+.DS_Store
+
+# Temporary files
+tmp
+*.tmp
+*.bak
+
+# Static exports
+out
+dist 
