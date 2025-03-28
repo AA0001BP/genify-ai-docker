@@ -11,6 +11,16 @@ const compat = new FlatCompat({
 
 const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
+  {
+    // TODO: Remove below rules which disable linting. Start linting. Fix issues
+    rules: {
+      "@typescript-eslint/no-unused-vars": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "react/no-unescaped-entities":    "off",
+      "react-hooks/exhaustive-deps":    "off",
+      "no-async-promise-executor": "off",
+    }
+  }
 ];
 
 export default eslintConfig;

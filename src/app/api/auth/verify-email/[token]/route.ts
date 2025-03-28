@@ -4,6 +4,7 @@ import User from '@/models/User';
 
 export async function GET(
   request: NextRequest,
+  // TODO: https://nextjs.org/docs/app/building-your-application/upgrading/version-15#params--searchparams
   { params }: { params: { token: string } }
 ) {
   const token = params.token;

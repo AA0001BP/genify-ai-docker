@@ -5,6 +5,7 @@ import { updatePayoutRequestStatus } from '@/lib/payoutService';
 // Update payout request status (admin only)
 export async function PATCH(
   req: NextRequest,
+  // TODO: https://nextjs.org/docs/app/building-your-application/upgrading/version-15#params--searchparams
   { params }: { params: { id: string } }
 ) {
   try {

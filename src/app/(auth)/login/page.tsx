@@ -1,5 +1,6 @@
 'use client';
 
+import { Suspense } from 'react'
 import { useState, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
@@ -13,7 +14,7 @@ type FormData = {
   password: string;
 };
 
-export default function Login() {
+export function Login() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [isLoading, setIsLoading] = useState(false);
@@ -172,3 +173,11 @@ export default function Login() {
     </div>
   );
 } 
+
+export default function LoginContent() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <Login />
+    </Suspense>
+  );
+}

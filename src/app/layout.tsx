@@ -13,12 +13,16 @@ const inter = Inter({
   weight: ['400', '500', '600', '700', '800']
 });
 
+
+export const viewport = {
+  themeColor: "#6366f1",
+};
+
 export const metadata: Metadata = {
   title: "Genify",
   description: "Make your AI writing sound human again. The trusted tool for students across the UK.",
   keywords: "AI writing, humanize text, Turnitin bypass, academic writing, essay help",
   authors: [{ name: "Genify Team" }],
-  themeColor: "#6366f1",
   icons: {
     icon: '/favicon.ico',
     apple: '/apple-icon.png',

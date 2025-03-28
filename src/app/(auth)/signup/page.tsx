@@ -1,5 +1,6 @@
 'use client';
 
+import { Suspense } from 'react'
 import { useState, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
@@ -16,7 +17,7 @@ type FormData = {
   referralCode: string;
 };
 
-export default function Signup() {
+export function Signup() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [isLoading, setIsLoading] = useState(false);
@@ -282,3 +283,11 @@ export default function Signup() {
     </div>
   );
 } 
+
+export default function SignupContent() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <Signup />
+    </Suspense>
+  );
+}

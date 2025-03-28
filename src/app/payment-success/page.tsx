@@ -1,11 +1,12 @@
 'use client';
 
+import { Suspense } from 'react'
 import { useState, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { useAuthContext } from '@/lib/contexts/AuthContext';
 
-export default function PaymentSuccessPage() {
+export function PaymentSuccessPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const { refreshUser } = useAuthContext();
@@ -108,3 +109,11 @@ export default function PaymentSuccessPage() {
     </div>
   );
 } 
+
+export default function PaymentSuccessPageContent() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <PaymentSuccessPage />
+    </Suspense>
+  );
+}

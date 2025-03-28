@@ -4,7 +4,8 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
+    "strict": true, // false
+    // "noImplicitAny": false, May be helpful in deploy in case of variables checks errors.
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
